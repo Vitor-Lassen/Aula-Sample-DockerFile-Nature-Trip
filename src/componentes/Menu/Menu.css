@@ -1,0 +1,19 @@
+.nav-bg {
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: #79912f;
+    width: 200px;       
+    gap: 400px;
+    padding-top: 60px;
+    padding-left: 20px;         
+}
+
+.logo-menu {
+    width: 200px;
+}
+
+p {    
+    margin: 10px;
+    margin-bottom: 10px;
+    color: white;
+}

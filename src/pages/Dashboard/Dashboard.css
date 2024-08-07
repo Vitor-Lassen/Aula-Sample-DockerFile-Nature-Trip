@@ -1,0 +1,12 @@
+h1 {
+    margin: 20px;    
+}
+
+.cards {
+    width: 200px;
+    height: 120px;
+    background-color: #435312;
+    align-items: center;
+    color: #eab741;
+    padding: 10px;
+}
