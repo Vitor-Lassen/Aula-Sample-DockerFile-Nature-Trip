@@ -27,4 +27,11 @@
     height: 10px;    
 }
 
+.texto-link {
+    text-decoration: none;
+    color: white;
+}
 
+.texto-link:hover {
+    color: #eab741;
+}
