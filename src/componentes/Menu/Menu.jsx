@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom'
 function Menu() {
     return (
         <>
-            <nav className='nav-bg flex-column'>
-                
-                <div>
-                    {/* <img className='logo-menu' src="../src/imgs/logo-birdy-branco.png" alt="Logo Birdy" /> */}
+            <nav className='nav-bg flex-column'>                
+                <div>                    
                     <Link to='/dashboard'>
                         <p>Dashboard</p>
                     </Link>
