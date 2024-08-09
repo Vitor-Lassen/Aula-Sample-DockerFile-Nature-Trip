@@ -9,7 +9,7 @@
 }
 
 .input-area {
-    height: 10px;
+    height: 20px;
     border-radius: 6px;
     font-weight: lighter;
     color: rgb(51, 51, 51);
@@ -18,7 +18,7 @@
     border: 1px solid rgb(153, 153, 153);
     padding-left: 48px;
     font-size: 14px;  
-    margin-bottom: 20px;   
+    margin-bottom: 15px;   
 }
 
 input[type="text" i] {
@@ -45,3 +45,26 @@ button:active {
     transform: scale(0.95);
 }
 
+.f-12 {
+    font-size: 12px;
+    font-weight:lighter;
+}
+
+.space::after {
+    content: '';
+    margin-right: 10px;
+}
+
+.container {
+    box-sizing: border-box;
+    background-color:#FFFBE9;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px;
+    align-items: center;
+}
+
+.titulo {
+    color: rgb(51, 51, 51);
+    margin-bottom: 10px;
+}
