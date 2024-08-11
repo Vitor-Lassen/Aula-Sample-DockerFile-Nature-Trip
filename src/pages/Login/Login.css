@@ -27,10 +27,10 @@
     margin-bottom: 10px;    
 }
 
-.texto-link {
+.texto-link {    
     text-decoration: none;
-    color: #eab741;
-    
+    color: #eab741; 
+    align-items: center;       
 }
 
 .texto-link:hover {
