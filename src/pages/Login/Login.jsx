@@ -31,6 +31,10 @@ function Login() {
         <>
             <div className='flex-row login-bg'>                
                 <div className='form-container-login flex-col'>
+                    <div className='img-frase'>
+                        <img src="../src/imgs/frase-login.png" alt="Birdy colecione suas histórias" />
+                    </div>
+                    
                     <h2>Login</h2>
                     <form onSubmit={handleSubmit} className='input-login flex-col'>
                         <input 
@@ -50,8 +54,8 @@ function Login() {
                         <button type='submit' className='btn-style'>Entrar</button>
                     </form>
                     <div className='flex-row f-12'>
-                        <p className='space'>Ainda não tem cadastro?</p>
-                        <Link className='flex-row texto-link' to='/cadastro-usuario'>
+                        <p className='space f-branco'>Ainda não tem cadastro?</p>
+                        <Link className='texto-link' to='/cadastro-usuario'>
                             <span className='texto-link'>Cadastrar</span>
                         </Link>
                     </div>
