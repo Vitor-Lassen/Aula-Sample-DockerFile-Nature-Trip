@@ -1,24 +1,58 @@
 import '../Login/Login.css'
-// import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Login() {
-   
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+    const navigate = useNavigate()
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+
+        try {
+            const response = await fetch('http://localhost:3000/usuarios')
+            const usuarios = await response.json()
+
+            const usuarioEncontrado = usuarios.find(usuario => usuario.email === email && usuario.senha === senha)
+
+            if (usuarioEncontrado) {
+                localStorage.setItem('autenticado', 'true')
+                navigate('/dashboard')
+            } else {
+                alert('E-mail ou senha incorretos')
+            }            
+        } catch (error) {
+            console.error('Erro de autenticação: ', error)
+        }
+    }   
     
     return (
         <>
             <div className='flex-row login-bg'>                
                 <div className='form-container-login flex-col'>
                     <h2>Login</h2>
-                    <form className='input-login flex-col' action="">
-                        <input className='input-area' type="text" placeholder='E-mail' />
-                        <input className='input-area' type="text" placeholder='Senha'/>
-                        <button>Entrar</button>
+                    <form onSubmit={handleSubmit} className='input-login flex-col'>
+                        <input 
+                            className='input-area' 
+                            type="text" 
+                            placeholder='E-mail' 
+                            value={email} 
+                            onChange={(e) => setEmail(e.target.value)} 
+                        />
+                        <input 
+                            className='input-area' 
+                            type="text" 
+                            placeholder='Senha'
+                            value={senha}
+                            onChange={(e) => setSenha(e.target.value)}
+                        />
+                        <button type='submit' className='btn-style'>Entrar</button>
                     </form>
                     <div className='flex-row f-12'>
                         <p className='space'>Ainda não tem cadastro?</p>
-                        <Link className='texto-link' to='/cadastro-usuario'>
-                            <p>Cadastrar</p>
+                        <Link className='flex-row texto-link' to='/cadastro-usuario'>
+                            <span className='texto-link'>Cadastrar</span>
                         </Link>
                     </div>
                     
