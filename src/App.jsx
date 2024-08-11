@@ -1,12 +1,13 @@
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 // import Dashboard from './pages/Dashboard/Dashboard'
-import Login from './pages/Login/Login'
+import AppRoutes from './routes/Routes'
 
 function App() {  
 
   return (
     <>
-      <Login></Login>   
+      <AppRoutes></AppRoutes>  
         
     </>
   )

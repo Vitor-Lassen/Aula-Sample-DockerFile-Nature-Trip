@@ -9,22 +9,30 @@
     justify-content: flex-end;       
 }
 
-.form-container{
+.form-container-login{
     box-sizing: border-box;    
     color: white;    
     width: 365px;
     height: 590px;
     justify-content: end;
     padding-left: 50px;
-    padding-bottom: 100px;     
-    
+    padding-bottom: 100px;   
 }
 
 .input-login {     
     align-items: start;    
     padding-bottom: 150px;
     padding-top: 15px;    
-    height: 10px;    
+    height: 10px;
+    margin-bottom: 10px;    
 }
 
+.texto-link {
+    text-decoration: none;
+    color: #eab741;
+    
+}
 
+.texto-link:hover {
+    color: #ce8326;    
+}

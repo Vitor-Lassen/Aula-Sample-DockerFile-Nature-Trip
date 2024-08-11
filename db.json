@@ -1,0 +1,80 @@
+{
+  "destinos": [],
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Milena Adriana Sara Almeida",
+      "sexo": "Feminino",
+      "cpf": "408.147.638-12",
+      "data_nasc": "04/08/1984",
+      "email": "milena-almeida84@netsite.com.br",
+      "senha": "KONsydJk9d",
+      "cep": "76820-216",
+      "endereco": "Rua Doutor Agenor de Carvalho",
+      "numero": 196,
+      "bairro": "Agenor de Carvalho",
+      "cidade": "Porto Velho",
+      "estado": "RO"
+    },
+    {
+      "id": "2",
+      "nome": "Heloisa Ester Drumond",
+      "sexo": "Feminino",
+      "cpf": "312.109.636-20",
+      "data_nasc": "13/03/1971",
+      "email": "heloisa-drumond88@sofisticattomoveis.com.br",
+      "senha": "6ryB35sCtG",
+      "cep": "72705-521",
+      "endereco": "Bloco Centro de Comércio e Diversões Bloco T",
+      "numero": 386,
+      "bairro": "Setor Norte (Brazlândia)",
+      "cidade": "Brasília",
+      "estado": "DF"
+    },
+    {
+      "id": "3",
+      "nome": "Nina Brenda Melo",
+      "sexo": "Feminino",
+      "cpf": "257.574.483-00",
+      "data_nasc": "06/07/1998",
+      "email": "nina_melo@outloock.com.br",
+      "senha": "NHwx9em26r",
+      "cep": "76873-382",
+      "endereco": "Rua João Goulart",
+      "numero": 402,
+      "bairro": "Setor 08",
+      "cidade": "Ariquemes",
+      "estado": "RO"
+    },
+    {
+      "id": "4",
+      "nome": "Isabella Regina Alice das Neves",
+      "sexo": "Feminino",
+      "cpf": "228.632.736-04",
+      "data_nasc": "02/05/1951",
+      "email": "isabellareginadasneves@uol.com",
+      "senha": "5sjht1PEhX",
+      "cep": "85869-299",
+      "endereco": "Avenida Gramado",
+      "numero": 950,
+      "bairro": "Jardim Canadá II",
+      "cidade": "Foz do Iguaçu",
+      "estado": "PR"
+    },
+    {
+      "id": "5",
+      "nome": "Amanda Priscila Nair da Mata",
+      "sexo": "Feminino",
+      "cpf": "597.862.243-45",
+      "data_nasc": "17/07/1984",
+      "email": "amanda.priscila.damata@evolink.com.br",
+      "senha": "WHBJ9yj2QK",
+      "cep": "77023-446",
+      "endereco": "Quadra 912 Sul Avenida LO 21",
+      "numero": 961,
+      "bairro": "Plano Diretor Sul",
+      "cidade": "Palmas",
+      "estado": "TO"
+    }
+  ]
+}
