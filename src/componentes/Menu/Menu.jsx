@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Menu() {
     return (
         <>
-            <nav className='nav-bg flex-column'>                
+            <nav className='nav-bg flex-col'>                
                 <div>                    
                     <Link to='/dashboard'>
                         <p>Dashboard</p>

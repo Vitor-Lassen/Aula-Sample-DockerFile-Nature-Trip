@@ -8,9 +8,9 @@ function Login() {
     return (
         <>
             <div className='flex-row login-bg'>                
-                <div className='form-container-login flex-column'>
+                <div className='form-container-login flex-col'>
                     <h2>Login</h2>
-                    <form className='input-login flex-column' action="">
+                    <form className='input-login flex-col' action="">
                         <input className='input-area' type="text" placeholder='E-mail' />
                         <input className='input-area' type="text" placeholder='Senha'/>
                         <button>Entrar</button>
