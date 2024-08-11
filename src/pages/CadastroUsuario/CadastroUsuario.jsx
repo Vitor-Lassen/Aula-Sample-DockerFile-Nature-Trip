@@ -1,12 +1,12 @@
-import '../CadastroUsuario/CadastroUsuario.css'
-import Menu from '../../componentes/Menu/Menu'
 import { useForm } from 'react-hook-form'
 import  { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 function CadastroUsuario() {
     const { register, handleSubmit, setValue, formState } = useForm()
     const [cep, setCep] = useState('')
+    const navigate = useNavigate()
 
     const buscaEndereco = async (cep) => {
         try {
@@ -43,6 +43,7 @@ function CadastroUsuario() {
                 alert('Erro ao cadastrar usuario.')
             } else {
                 alert('Cadastro efetuado com sucesso!')
+                navigate('/')
             }
 
         } catch (error) {
@@ -53,7 +54,9 @@ function CadastroUsuario() {
     return (
         <>
             <div className='flex-row'>
-                <Menu></Menu>
+                <div className='img-lateral'>
+                    <img src="../src/imgs/lateral.jpg" alt="Imagem lateral mapa e câmera com capa de couro" />
+                </div>
                 <div className="container-bg flex-col justify-content-center w-100">
                     <h2 className='titulo'>Cadastre-se</h2>
                     <div>

@@ -1,4 +1,5 @@
 .login-bg {
+    box-sizing: border-box;
     background-image: url('../../imgs/background.jpg');
     background-color: #504d2c;
     background-size:contain;
@@ -11,26 +12,26 @@
 
 .form-container-login{
     box-sizing: border-box;    
-    color: white;    
+    color: #eab741;    
     width: 365px;
     height: 590px;
     justify-content: end;
     padding-left: 50px;
-    padding-bottom: 100px;   
+    padding-bottom: 20px;   
 }
 
 .input-login {     
     align-items: start;    
     padding-bottom: 150px;
-    padding-top: 15px;    
+    padding-top: 10px;    
     height: 10px;
-    margin-bottom: 10px;    
+    margin-bottom: 30px;      
 }
 
-.texto-link {
+.texto-link {    
     text-decoration: none;
-    color: #eab741;
-    
+    color: #eab741; 
+    align-items: center;       
 }
 
 .texto-link:hover {
