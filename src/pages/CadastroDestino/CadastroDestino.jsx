@@ -1,7 +1,8 @@
 import { useForm } from 'react-hook-form'
 import  { useEffect, useState } from 'react'
-import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import buscaCep from '../../util/buscaCep'
+import buscaCoordenadas from '../../util/buscaCoordenadas'
 
 function CadastroDestino() {
     const { register, handleSubmit, setValue, formState } = useForm()
@@ -13,27 +14,20 @@ function CadastroDestino() {
         const usuarioNome = localStorage.getItem('usuarioNome') 
         const usuarioId = localStorage.getItem('usuarioId')
         setUsuario({ nome: usuarioNome, id: usuarioId})
-    }, [])
+    }, [])    
 
-    const buscaCep = async (cep) => {
-        try {
-            const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`)
-            if (!response.data.erro) {
-                setValue('cidade', response.data.localidade)
-                setValue('estado', response.data.uf)
-            } else {
-                alert('CEP não encontrado.')
-            }
-        } catch (error) {
-            console.log('Erro ao buscar local: ', error)            
-        }
-    }
-
-    const onCepChange = (e) => {
+    const onCepChange = async (e) => {
         const cepValue = e.target.value.replace(/\D/g, '')
         setCep(cepValue)
         if (cepValue.length === 8) {
-            buscaCep(cepValue)
+            await buscaCep(cepValue, setValue)         
+        }
+    }
+
+    const onCoordenadasChange = async (e) => {
+        const coordenadasValue = e.target.value;
+        if (coordenadasValue) {
+           await buscaCoordenadas(coordenadasValue, setValue);
         }
     }
 
@@ -107,14 +101,17 @@ function CadastroDestino() {
                                     className='input-area w-100' 
                                     type="text" 
                                     placeholder='Coordenadas Geográficas' 
-                                    {...register('coordenadas', { required: 'Informe a latitude e longitude do local.' })} />
+                                    {...register('coordenadas', { required: 'Informe a latitude e longitude do local.' })} 
+                                    onBlur={onCoordenadasChange}
+                                    />
                                 </div>
                                 <div className='col-2'>
                                     <span className='error-message'>{formState.errors?.cep?.message}</span>
                                     <input 
                                     className='input-area w-100' 
                                     type="text" placeholder='CEP' 
-                                    {...register('cep', { required: 'Informe o CEP do local' })} value={cep} onChange={onCepChange} />
+                                    {...register('cep', { required: 'Informe o CEP do local' })} value={cep} onChange={onCepChange} 
+                                    />
                                 </div>
                                 <div className='col-3'>
                                     <span className='error-message'>{formState.errors?.cidade?.message}</span>
@@ -122,7 +119,8 @@ function CadastroDestino() {
                                     className='input-area w-100' 
                                     type="text" 
                                     placeholder='Cidade' 
-                                    {...register('cidade', { required: 'Campo Obrigatório' })} />
+                                    {...register('cidade', { required: 'Campo Obrigatório' })} 
+                                    />
                                 </div>
                                 <div className='col-3'>
                                     <span className='error-message'>{formState.errors?.estado?.message}</span>
@@ -130,7 +128,8 @@ function CadastroDestino() {
                                     className='input-area w-100' 
                                     type="text" 
                                     placeholder='Estado' 
-                                    {...register('estado', { required: 'Campo Obrigatório' })} />
+                                    {...register('estado', { required: 'Campo Obrigatório' })} 
+                                    />
                                 </div>
                             </div>                            
 
