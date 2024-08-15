@@ -18,6 +18,8 @@ function Login() {
 
             if (usuarioEncontrado) {
                 localStorage.setItem('autenticado', 'true')
+                localStorage.setItem('usuarioId', usuarioEncontrado.id)
+                localStorage.setItem('usuarioNome', usuarioEncontrado.nome)
                 navigate('/dashboard')
             } else {
                 alert('E-mail ou senha incorretos')
@@ -46,7 +48,7 @@ function Login() {
                         />
                         <input 
                             className='input-area' 
-                            type="text" 
+                            type="password" 
                             placeholder='Senha'
                             value={senha}
                             onChange={(e) => setSenha(e.target.value)}

@@ -64,8 +64,12 @@ function CadastroUsuario() {
                             <div className='row'>
                                 <div className='col-12'>
                                 <span className='error-message'>{formState.errors?.nome?.message}</span><br/>
-                                    <input className='input-area w-100' type="text" placeholder='Nome' {...register('nome', { required: 'Campo Obrigatório' })} />
-                                    
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="text" 
+                                    placeholder='Nome' 
+                                    {...register('nome', { required: 'Campo Obrigatório' })} 
+                                    />                                    
                                 </div>
                             </div>
 
@@ -81,52 +85,92 @@ function CadastroUsuario() {
                                 </div>
                                 <div className='col-4'>
                                     <span className='error-message'>{formState.errors?.cpf?.message}</span>
-                                    <input className='input-area w-100' type="text" placeholder='CPF' {...register('cpf', { required: 'Campo Obrigatório' })} />
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="text" 
+                                    placeholder='CPF' 
+                                    {...register('cpf', { required: 'Campo Obrigatório' })} 
+                                    />
                                 </div>
                                 <div className='col-4'>
                                     <span className='error-message'>{formState.errors?.data_nasc?.message}</span>
-                                    <input className='input-area w-100' type="text" placeholder='Data de Nascimento' {...register('data_nasc', { required: 'Campo Obrigatório' })} />
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="date" 
+                                    placeholder='Data de Nascimento' 
+                                    {...register('data_nasc', { required: 'Campo Obrigatório' })} 
+                                    />
                                 </div>
                             </div>
 
                             <div className='row'>
                                 <div className='col-8'>
                                     <span className='error-message'>{formState.errors?.email?.message}</span>
-                                    <input className='input-area w-100' type="text" placeholder='E-mail' {...register('email', { required: 'Campo Obrigatório' })} />
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="text" placeholder='E-mail' 
+                                    {...register('email', { required: 'Campo Obrigatório' })} />
                                 </div>
                                 <div className='col-4'>
                                     <span className='error-message'>{formState.errors?.senha?.message}</span>
-                                    <input className='input-area w-100' type="text" placeholder='Senha' {...register('senha', { required: 'Campo Obrigatório' })} />
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="text" 
+                                    placeholder='Senha' 
+                                    {...register('senha', { required: 'Campo Obrigatório' })} />
                                 </div>
                             </div>
 
                             <div className='row'>
                                 <div className='col-3'>
                                     <span className='error-message'>{formState.errors?.cep?.message}</span>
-                                    <input className='input-area w-100' type="text" placeholder='CEP' {...register('cep', { required: 'Campo Obrigatório'})} value={cep} onChange={onCepChange} />
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="text" 
+                                    placeholder='CEP' 
+                                    {...register('cep', { required: 'Campo Obrigatório'})} value={cep} onChange={onCepChange} />
                                 </div>
                                 <div className='col-7'>
                                     <span className='error-message'>{formState.errors?.endereco?.message}</span>
-                                    <input className='input-area w-100' type="text" placeholder='Endereço' {...register('endereco', { required: 'Campo Obrigatório' })} />
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="text" 
+                                    placeholder='Endereço' 
+                                    {...register('endereco', { required: 'Campo Obrigatório' })} />
                                 </div>
                                 <div className='col-2'>
                                     <span className='error-message'>{formState.errors?.numero?.message}</span>
-                                    <input className='input-area w-100' type="text" placeholder='Número' {...register('numero', { required: 'Campo Obrigatório' })} />
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="text" 
+                                    placeholder='Número' 
+                                    {...register('numero', { required: 'Campo Obrigatório' })} />
                                 </div>                                
                             </div>
 
                             <div className='row'>
                                 <div className='col-4'>
                                     <span className='error-message'>{formState.errors?.bairro?.message}</span>
-                                    <input className='input-area w-100' type="text" placeholder='Bairro' {...register('bairro', { required: 'Campo Obrigatório' })} />
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="text" 
+                                    placeholder='Bairro' 
+                                    {...register('bairro', { required: 'Campo Obrigatório' })} />
                                 </div>
                                 <div className='col-4'>
                                     <span className='error-message'>{formState.errors?.cidade?.message}</span>
-                                    <input className='input-area w-100' type="text" placeholder='Cidade' {...register('cidade', { required: 'Campo Obrigatório' })} />
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="text" placeholder='Cidade' 
+                                    {...register('cidade', { required: 'Campo Obrigatório' })} />
                                 </div>
                                 <div className='col-4'>
                                     <span className='error-message'>{formState.errors?.estado?.message}</span>
-                                    <input className='input-area w-100' type="text" placeholder='Estado' {...register('estado', { required: 'Campo Obrigatório' })} />                                            
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="text" 
+                                    placeholder='Estado' 
+                                    {...register('estado', { required: 'Campo Obrigatório' })} />                                            
                                 </div>
                             </div>
 

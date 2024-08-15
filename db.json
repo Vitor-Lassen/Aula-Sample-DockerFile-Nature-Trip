@@ -1,5 +1,16 @@
 {
-  "destinos": [],
+  "destinos": [
+    {
+      "id": "bb08",
+      "nome": "PETAR - Parque Estadual Turístico do Alto Ribeira",
+      "descricao": "Parque estadual com Mata Atlântica preservada, mais de 350 cavernas, cachoeiras, rios e quatro centros de visitantes.",
+      "coordenadas": "-24.551436,-48.6828329",
+      "cep": "18330000",
+      "cidade": "Iporanga",
+      "estado": "SP",
+      "usuarioId": "8082"
+    }
+  ],
   "usuarios": [
     {
       "id": "1",
@@ -75,6 +86,21 @@
       "bairro": "Plano Diretor Sul",
       "cidade": "Palmas",
       "estado": "TO"
-    }    
+    },
+    {
+      "id": "8082",
+      "nome": "Paulo Vinicius Noah Nunes",
+      "sexo": "masculino",
+      "cpf": "206.125.958-89",
+      "data_nasc": "1991-06-25",
+      "email": "paulo.vinicius.nunes@yhaoo.com.br",
+      "senha": "i1m9yI2AgD",
+      "cep": "18116060",
+      "endereco": "Rua Laurípedes de Oliveira",
+      "numero": "256",
+      "bairro": "Vossoroca",
+      "cidade": "Votorantim",
+      "estado": "SP"
+    }
   ]
 }
