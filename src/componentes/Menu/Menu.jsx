@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 function Menu() {
     return (
         <>
-            <nav className='nav-bg flex-col'>                
+            <nav className='nav-bg'>                
                 <div>                    
-                    <Link to='/dashboard'>
+                    <Link className='decor-none' to='/dashboard'>
                         <p>Dashboard</p>
                     </Link>
 
-                    <div>
+                    <Link className='decor-none' to='/locais'>
                         <p>Locais</p>
-                    </div>
+                    </Link>
 
                     <div>
                         <p>Perfil do Usuário</p>

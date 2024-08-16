@@ -9,6 +9,16 @@
       "cidade": "Iporanga",
       "estado": "SP",
       "usuarioId": "8082"
+    },
+    {
+      "id": "bb08",
+      "nome": "PETAR - Parque Estadual Turístico do Alto Ribeira",
+      "descricao": "Parque estadual com Mata Atlântica preservada, mais de 350 cavernas, cachoeiras, rios e quatro centros de visitantes.",
+      "coordenadas": "-24.551436,-48.6828329",
+      "cep": "18330000",
+      "cidade": "Iporanga",
+      "estado": "SP",
+      "usuarioId": "8082"
     }
   ],
   "usuarios": [
@@ -101,6 +111,21 @@
       "bairro": "Vossoroca",
       "cidade": "Votorantim",
       "estado": "SP"
+    },
+    {
+      "id": "60fc",
+      "nome": "Maitê Mariana Andreia Dias",
+      "sexo": "feminino",
+      "cpf": "042.761.572-00",
+      "data_nasc": "1985-08-08",
+      "email": "maite.mariana.dias@outlook.com",
+      "senha": "5xUsnHoKIW",
+      "cep": "68927069",
+      "endereco": "Travessa Senador Teotônio Vilela",
+      "numero": "629",
+      "bairro": "Remedios",
+      "cidade": "Santana",
+      "estado": "AP"
     }
   ]
 }

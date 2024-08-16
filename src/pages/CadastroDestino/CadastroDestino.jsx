@@ -3,6 +3,7 @@ import  { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import buscaCep from '../../util/buscaCep'
 import buscaCoordenadas from '../../util/buscaCoordenadas'
+import Menu from '../../componentes/Menu/Menu'
 
 function CadastroDestino() {
     const { register, handleSubmit, setValue, formState } = useForm()
@@ -58,16 +59,14 @@ function CadastroDestino() {
     return (
         <>
             <div className='flex-row'>
-                <div className='img-lateral'>
-                    <img src="../src/imgs/lateral.jpg" alt="Imagem lateral mapa e câmera com capa de couro" />
-                </div>
-                <div className="container-bg flex-col justify-content-center w-100">
+                <Menu></Menu>
+                <div className="container-bg column justify-content-center w-100">
                     <h2 className='titulo'>Cadastro de Local</h2>
                     <div>
                         <form className='container' onSubmit={handleSubmit(addDestino)}>
                             <div className='row'>
                                 <div className='col-12'>                                    
-                                    <span>ID: {usuario.id} {usuario.nome}</span>
+                                    <span className='f-12'>ID: {usuario.id} {usuario.nome}</span>
                                 </div>
                             </div>
                             <div className='row'>
