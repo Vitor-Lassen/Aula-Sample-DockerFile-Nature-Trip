@@ -32,13 +32,13 @@ function Login() {
     return (
         <>
             <div className='flex-row login-bg'>                
-                <div className='form-container-login flex-col'>
+                <div className='form-container-login column'>
                     <div className='img-frase'>
                         <img src="../src/imgs/frase-login.png" alt="Birdy colecione suas histórias" />
                     </div>
                     
                     <h2>Login</h2>
-                    <form onSubmit={handleSubmit} className='input-login flex-col'>
+                    <form onSubmit={handleSubmit} className='input-login column'>
                         <input 
                             className='input-area' 
                             type="text" 
@@ -52,7 +52,7 @@ function Login() {
                             placeholder='Senha'
                             value={senha}
                             onChange={(e) => setSenha(e.target.value)}
-                        />
+                        /> <br />
                         <button type='submit' className='btn-style'>Entrar</button>
                     </form>
                     <div className='flex-row f-12'>

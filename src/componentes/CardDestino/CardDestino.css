@@ -1,0 +1,35 @@
+.card-container {
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #8d8d8d;
+    width: 650px;
+    height: 180px;    
+    overflow: hidden;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;                   
+}
+
+.header-card {     
+    background-color: #7b2b2a;
+    padding: 5px;
+    border-radius: 6px 6px 0 0;
+    margin: 0;
+    color: antiquewhite;
+}
+
+.descricao-card {    
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.footer-card {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 6px 6px;   
+    padding: 10px;
+}
