@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
-import BuscaCep from '../../util/BuscaCep'
+import buscaCep from '../../util/buscaCep'
 import { useNavigate } from 'react-router-dom'
 
 function CadastroUsuario() {
@@ -12,7 +12,7 @@ function CadastroUsuario() {
         const cepValue = e.target.value.replace(/\D/g, '')
         setCep(cepValue)
         if (cepValue.length === 8) {
-            BuscaCep(cepValue, setValue)
+            buscaCep(cepValue, setValue)
         }
     }
 
@@ -38,13 +38,13 @@ function CadastroUsuario() {
     return (
         <>
             <div className='flex-row'>
-                <div className='img-lateral'>
+                <div className='position-fixed'>
                     <img src="../src/imgs/lateral.jpg" alt="Imagem lateral mapa e câmera com capa de couro" />
                 </div>
-                <div className="container-bg flex-col justify-content-center w-100">
+                <div className="container-bg ml-500">
                     <h2 className='titulo'>Cadastre-se</h2>
                     <div>
-                        <form className='container' onSubmit={handleSubmit(addUser)}>
+                        <form onSubmit={handleSubmit(addUser)}>
                             <div className='row'>
                                 <div className='col-12'>
                                     <span className='error-message'>{formState.errors?.nome?.message}</span><br />

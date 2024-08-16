@@ -1,14 +1,17 @@
-.nav-bg {
+.nav-bg {    
     box-sizing: border-box;    
     background-color: #504d2c;
     width: 200px;       
     gap: 350px;
     padding-top: 50px;
-    padding-left: 20px;         
+    padding-left: 20px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;       
 }
 
-p {    
-    margin: 10px;
-    margin-bottom: 10px;
+.nav-bg p {    
+    margin: 10px 0;    
     color: white;
 }
