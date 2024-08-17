@@ -13,11 +13,13 @@ async function buscaCoordenadas(coordenadas, setValue) {
         
         if (response.data && response.data.address) {
             const cidade = response.data.address.city || response.data.address.town || response.data.address.village;
-            const estado = response.data.address.state            
+            const estado = response.data.address.state 
+            const pais = response.data.address.country           
 
-            if (cidade && estado) {
+            if (cidade && estado && pais) {
                 setValue('cidade', cidade)
-                setValue('estado', estado)            
+                setValue('estado', estado)
+                setValue('pais', pais)            
 
             } else {
                 throw new Error('Coordenadas não encontradas.')

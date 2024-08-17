@@ -11,7 +11,6 @@
     background-color: rgba(255, 255, 255, 0.822);    
     font-family: Roboto;
     border: 1px solid rgb(153, 153, 153);
-    padding-left: 10px;
     padding-top: 5px;
     font-size: 14px;
     margin-top: 18px;          
@@ -22,7 +21,7 @@ textarea[type="text" i],
 input[type="password" i],
 input[type="date"] {
     padding: 15px;
-    padding-left: 20px;    
+    padding-left: 10px;    
 }
 
 select.input-area {

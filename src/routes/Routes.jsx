@@ -6,33 +6,30 @@ import CadastroDestino from '../pages/CadastroDestino/CadastroDestino'
 import ListaDestinos from '../pages/ListaDestinos/ListaDestinos'
 import PerfilUsuario from '../pages/PerfilUsuario/PerfilUsuario'
 import AlterarDestino from '../pages/AlterarDestino/AlterarDestino'
-// import TemplatePrivado from './TemplatePrivado'
+import TemplatePrivateRoute from '../templates/TemplatePrivateRoute'
+import { AuthProvider } from '../contexts/auth'
 
 function AppRoutes() {
     return (
-        <Router>
-            <Routes>
-                <Route path='/' element={<Login/>}/>
-                <Route path='/login' element={<Login/>}/>
-                <Route path='/cadastro-usuario' element={<CadastroUsuario/>}/>
+        <>
+            <AuthProvider>
+                <Router>
+                    <Routes>
+                        <Route path='/' element={<Login />} />
+                        <Route path='/login' element={<Login />} />
+                        <Route path='/cadastro-usuario' element={<CadastroUsuario />} />
 
-                <Route path='/cadastro-local' element={<CadastroDestino/>}/>
-                <Route path='/dashboard' element={<Dashboard/>}/>
-                 <Route path='/locais' element={<ListaDestinos/>}/>
-                 <Route path='/perfil-usuario' element={<PerfilUsuario/>}/>
-                 <Route path='/locais' element={<ListaDestinos/>}/>
-                 <Route path='/alterar-local/:id' element={<AlterarDestino/>}/>
-                
-                {/* <Route path='/' element={<TemplatePrivado/>}> */}
-                    {/* <Route path='/dashboard' element={<Dashboard/>}/> */}
-                    {/* <Route path='/cadastro-destino' element={<CadastroDestino/>}/> */}
-                    {/* <Route path='/locais' element={<ListaDestinos/>}/> */}
-                    {/* <Route path='/perfil-usuario' element={<PerfilUsuario/>}/> */}
-                {/* </Route>                */}
-            </Routes>
-        </Router>
-
-
+                        <Route path='/' element={<TemplatePrivateRoute />}>
+                            <Route path='/dashboard' element={<Dashboard />} />
+                            <Route path='/cadastro-local' element={<CadastroDestino />} />
+                            <Route path='/locais' element={<ListaDestinos />} />
+                            <Route path='/perfil-usuario' element={<PerfilUsuario />} />
+                            <Route path='/alterar-local/:id' element={<AlterarDestino />} />
+                        </Route>
+                    </Routes>
+                </Router>
+            </AuthProvider>
+        </>
     )
 }
 

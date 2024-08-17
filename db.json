@@ -1,26 +1,15 @@
 {
   "destinos": [
     {
-      "id": "bb08",
-      "nome": "PETAR - Parque Estadual Turístico do Alto Ribeira",
-      "descricao": "Parque estadual com Mata Atlântica preservada, mais de 350 cavernas, cachoeiras, rios e quatro centros de visitantes.",
-      "coordenadas": "-24.551436,-48.6828329",
-      "cep": "18330000",
-      "cidade": "Iporanga",
-      "estado": "São Paulo",
-      "usuarioId": "1"
-    },
-    {
       "id": "f962",
       "nome": "Lagoa do Peri",
-      "descricao": "lalalalal lal lalalalala",
+      "descricao": "A Lagoa do Peri é um corpo de água doce situada ao sudeste de Florianópolis, capital de Santa Catarina, entre uma cadeia de montanhas e o oceano Atlântico. É a maior lagoa da ilha de Santa Catarina - considerando que a Lagoa da Conceição, o maior corpo de água da ilha, é uma laguna salobra.",
       "coordenadas": "-27.7327331,-48.5423175",
       "cep": "88066242",
       "cidade": "Florianópolis",
       "estado": "Santa Catarina",
-      "endereco": "Servidão Alfredo Manoel Vieira",
-      "bairro": "Morro das Pedras",
-      "usuarioId": "1"
+      "usuarioId": "8082",
+      "pais": "Brasil"
     },
     {
       "id": "252e",
@@ -30,9 +19,8 @@
       "cep": "4641",
       "cidade": "Municipio de Susques",
       "estado": "Jujuy",
-      "endereco": "Servidão Alfredo Manoel Vieira",
-      "bairro": "Morro das Pedras",
-      "usuarioId": "a4c9"
+      "usuarioId": "2",
+      "pais": "Argentina"
     },
     {
       "id": "7309",
@@ -42,7 +30,19 @@
       "cep": "",
       "cidade": "Iporanga",
       "estado": "São Paulo",
-      "usuarioId": "a4c9"
+      "usuarioId": "a4c9",
+      "pais": "Brasil"
+    },
+    {
+      "id": "8131",
+      "nome": "Ponta das Campanhas",
+      "descricao": "A Ponta das Companhas, localizada entre as praias da Armação e do Matadeiro, encanta com sua beleza natural e histórica. Acessível por uma passarela de madeira, esta ponta oferece uma visão deslumbrante das praias vizinhas. Ao olhar para a esquerda, estando de frente para as praias, contempla-se a deslumbrante Praia do Matadeiro, enquanto à direita surge a bela Praia da Armação.",
+      "coordenadas": "-27.7483373,-48.4991234",
+      "cep": "",
+      "cidade": "Florianópolis",
+      "estado": "Santa Catarina",
+      "pais": "Brasil",
+      "usuarioId": "8082"
     }
   ],
   "usuarios": [

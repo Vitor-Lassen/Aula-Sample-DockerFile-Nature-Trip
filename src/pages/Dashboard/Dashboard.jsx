@@ -79,7 +79,9 @@ function Dashboard() {
                                     nome={destino.nome}
                                     descricao={destino.descricao}
                                     cidade={destino.cidade}
-                                    estado={destino.estado}                                    
+                                    estado={destino.estado}
+                                    pais={destino.pais}
+                                    coordenadas={destino.coordenadas}                                    
                                     onMouseEnter={() => handleMouseEnter(destino)}
                                     onMouseLeave={handleMouseLeave}
                                 />
