@@ -1,10 +1,16 @@
 import '../CardDestino/CardDestino.css'
 
 
-function CardDestino({ nome, descricao, cidade, estado }) {
+function CardDestino({ nome, descricao, cidade, estado, pais, coordenadas, onMouseEnter, onMouseLeave }) {
+    const [lat, lon] = coordenadas.split(',')
+
     return (
         <>
-            <div className='card-container column'>
+            <div
+                className='card-container column'
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+            >
                 <div className='row header-card'>
                     <div className='col'>
                         <h6>{nome}</h6>
@@ -12,7 +18,7 @@ function CardDestino({ nome, descricao, cidade, estado }) {
                 </div>
                 <div className='row descricao-card'>
                     <div className='col'>
-                        <h7>{descricao}</h7>
+                        <p>{descricao}</p>
                     </div>
                 </div>
                 <div className='row footer-card'>
@@ -22,7 +28,13 @@ function CardDestino({ nome, descricao, cidade, estado }) {
                     <div className='col'>
                         <h6>{estado}</h6>
                     </div>
-                    
+                    <div className='col'>
+                        <h6>{pais}</h6>
+                    </div>
+                    <div className='col'>
+                        <h6>{coordenadas}</h6>
+                        
+                    </div>
                 </div>
             </div>
         </>

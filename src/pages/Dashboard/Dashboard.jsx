@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
-import Menu from '../../componentes/Menu/Menu'
+import { useNavigate } from 'react-router-dom'
 import '../Dashboard/Dashboard.css'
+import Menu from '../../componentes/Menu/Menu'
 import contaDados from '../../util/contaDados'
 import CardDestino from '../../componentes/CardDestino/CardDestino'
-import { useNavigate } from 'react-router-dom';
+import Mapa from '../../componentes/Mapa/Mapa'
 
 function Dashboard() {
     const [contUsuarios, setContUsuarios] = useState(0)
     const [contDestinos, setContDestinos] = useState(0)
     const [destinos, setDestinos] = useState([])
+    const [selectedDestino, setSelectedDestino] = useState(null)
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -19,30 +21,43 @@ function Dashboard() {
 
             const response = await fetch('http://localhost:3000/destinos')
             const data = await response.json()
-            setDestinos(data)
+            setDestinos(data)            
         }
 
         fetchData()
-    }, [])    
+    }, [])
 
     const handleNovoLocal = () => {
-        navigate('/cadastro-destino')
+        navigate('/cadastro-local')
     }
-    
+
+    const handleMouseEnter = (destino) => {
+        setSelectedDestino(destino);
+    }
+
+    const handleMouseLeave = () => {
+        setSelectedDestino(null);
+    }
+
+    const handleCardClick = (destino) => {
+        setSelectedDestino(destino);
+    }
+
     return (
         <>
             <div className='flex-row'>
                 <Menu></Menu>
+                <Mapa selectedDestino={selectedDestino} destinos={destinos} />
                 <div className='flex-column container-bg'>
                     <div className='position-fixed dashboard-container'>
                         <div className='d-flex align-items-baseline'>
                             <h2 className='titulo'>Dashboard</h2>
                             <button onClick={handleNovoLocal} className='btn-style f-13'>Novo Local</button>
                         </div>
-                        
+
                         <div className='flex-row'>
                             <h5
-                                className='cards'>
+                                className='card'>
                                 <div className='flex-row  justify-content-between'>
                                     <span className='num-card'>{contUsuarios}</span>
                                     <img className='icon-card' src="../src/imgs/user-icon.png" alt="Icon Usuário" />
@@ -50,7 +65,7 @@ function Dashboard() {
                                 Usuários
                             </h5>
                             <h5
-                                className='cards'>
+                                className='card'>
                                 <div className='flex-row  justify-content-between'>
                                     <span className='num-card'>{contDestinos}</span>
                                     <img className='icon-card' src="../src/imgs/local-icon.png" alt="Icone Localização" />
@@ -69,6 +84,11 @@ function Dashboard() {
                                     descricao={destino.descricao}
                                     cidade={destino.cidade}
                                     estado={destino.estado}
+                                    pais={destino.pais}
+                                    coordenadas={destino.coordenadas}
+                                    onMouseEnter={() => handleMouseEnter(destino)}
+                                    onMouseLeave={handleMouseLeave}
+                                    onClick={() => handleCardClick(destino)}
                                 />
                             ))}
                         </div>
