@@ -60,18 +60,18 @@ function CadastroDestino() {
         <>
             <div className='flex-row'>
                 <Menu></Menu>
-                <div className="container-bg column justify-content-center w-100">
+                <div className="container-bg">
                     <h2 className='titulo'>Cadastro de Local</h2>
                     <div>
                         <form className='container' onSubmit={handleSubmit(addDestino)}>
                             <div className='row'>
                                 <div className='col-12'>                                    
-                                    <span className='f-12'>ID: {usuario.id} {usuario.nome}</span>
+                                    <span className='f-10'>ID: {usuario.id} {usuario.nome}</span>
                                 </div>
                             </div>
-                            <div className='row'>
+                            <div className='row mt-4'>
                                 <div className='col-12'>
-                                <span className='error-message'>{formState.errors?.nome?.message}</span><br/>
+                                <span className='error-message'>{formState.errors?.nome?.message}</span>
                                     <input 
                                     className='input-area w-100' 
                                     type="text" 
@@ -81,7 +81,7 @@ function CadastroDestino() {
                                 </div>
                             </div>
 
-                            <div className='row'>                                
+                            <div className='row mt-4'>                                
                                 <div className='col-12'>
                                     <span className='error-message'>{formState.errors?.descricao?.message}</span>
                                     <textarea 
@@ -93,7 +93,7 @@ function CadastroDestino() {
                                 </div>                                
                             </div>
 
-                            <div className='row'>
+                            <div className='row mt-4'>
                                 <div className='col-4'>
                                     <span className='error-message'>{formState.errors?.coordenadas?.message}</span>
                                     <input 
@@ -109,7 +109,7 @@ function CadastroDestino() {
                                     <input 
                                     className='input-area w-100' 
                                     type="text" placeholder='CEP' 
-                                    {...register('cep', { required: 'Informe o CEP do local' })} value={cep} onChange={onCepChange} 
+                                    {...register('cep')} value={cep} onChange={onCepChange} 
                                     />
                                 </div>
                                 <div className='col-3'>
@@ -132,7 +132,7 @@ function CadastroDestino() {
                                 </div>
                             </div>                            
 
-                            <button className='btn-style w-100' type='submit'>Cadastrar</button>
+                            <button className='mt-5 btn-style w-100' type='submit'>Cadastrar</button>
                         </form>
                     </div>
                 </div>
