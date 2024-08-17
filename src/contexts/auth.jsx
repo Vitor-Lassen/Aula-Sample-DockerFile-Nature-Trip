@@ -6,8 +6,12 @@ export function AuthProvider({ children }) {
     const [isAuthenticated, setIsAuthenticated] = useState(false)
 
     useEffect(() => {        
-        const autenticado = localStorage.getItem('autenticado') === 'true'
-        setIsAuthenticated(autenticado)
+        const checkAuth = () => {
+            const autenticado = localStorage.getItem('autenticado') === 'true'
+            setIsAuthenticated(autenticado)
+        }
+
+        checkAuth()
     }, [])
 
     const signIn = () => {        
@@ -18,6 +22,10 @@ export function AuthProvider({ children }) {
     const signOut = () => {        
         setIsAuthenticated(false)
         localStorage.removeItem('autenticado')
+    }
+
+    if (isAuthenticated === null) {
+        return <div>Loading...</div>
     }
 
     return (

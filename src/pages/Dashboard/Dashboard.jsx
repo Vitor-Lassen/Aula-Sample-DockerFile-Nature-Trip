@@ -9,11 +9,11 @@ import Mapa from '../../componentes/Mapa/Mapa'
 function Dashboard() {
     const [contUsuarios, setContUsuarios] = useState(0)
     const [contDestinos, setContDestinos] = useState(0)
-    const [destinos, setDestinos] = useState([]) 
-    const [selectedDestino, setSelectedDestino] = useState(null) 
+    const [destinos, setDestinos] = useState([])
+    const [selectedDestino, setSelectedDestino] = useState(null)
     const navigate = useNavigate()
 
-        useEffect(() => {
+    useEffect(() => {
         async function fetchData() {
             const { contUsuarios, contDestinos } = await contaDados()
             setContUsuarios(contUsuarios)
@@ -21,7 +21,7 @@ function Dashboard() {
 
             const response = await fetch('http://localhost:3000/destinos')
             const data = await response.json()
-            setDestinos(data)
+            setDestinos(data)            
         }
 
         fetchData()
@@ -29,7 +29,7 @@ function Dashboard() {
 
     const handleNovoLocal = () => {
         navigate('/cadastro-local')
-    }      
+    }
 
     const handleMouseEnter = (destino) => {
         setSelectedDestino(destino);
@@ -39,11 +39,15 @@ function Dashboard() {
         setSelectedDestino(null);
     }
 
+    const handleCardClick = (destino) => {
+        setSelectedDestino(destino);
+    }
+
     return (
         <>
             <div className='flex-row'>
                 <Menu></Menu>
-                <Mapa selectedDestino={selectedDestino}/>
+                <Mapa selectedDestino={selectedDestino} destinos={destinos} />
                 <div className='flex-column container-bg'>
                     <div className='position-fixed dashboard-container'>
                         <div className='d-flex align-items-baseline'>
@@ -68,7 +72,7 @@ function Dashboard() {
                                 </div>
                                 Locais
                             </h5>
-                        </div>                        
+                        </div>
                     </div>
 
                     <div className='lista-locais'>
@@ -81,9 +85,10 @@ function Dashboard() {
                                     cidade={destino.cidade}
                                     estado={destino.estado}
                                     pais={destino.pais}
-                                    coordenadas={destino.coordenadas}                                    
+                                    coordenadas={destino.coordenadas}
                                     onMouseEnter={() => handleMouseEnter(destino)}
                                     onMouseLeave={handleMouseLeave}
+                                    onClick={() => handleCardClick(destino)}
                                 />
                             ))}
                         </div>

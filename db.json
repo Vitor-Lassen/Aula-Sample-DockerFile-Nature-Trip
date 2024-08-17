@@ -41,12 +41,13 @@
       "cep": "",
       "cidade": "Florianópolis",
       "estado": "Santa Catarina",
-      "pais": "Brasil",
-      "usuarioId": "8082"
+      "usuarioId": "8082",
+      "pais": "Brasil"
     }
   ],
   "usuarios": [
     {
+      "id": "1",
       "nome": "Milena Adriana Sara Almeida",
       "sexo": "feminino",
       "cpf": "408.147.638-12",
@@ -58,15 +59,14 @@
       "numero": 196,
       "bairro": "Agenor de Carvalho",
       "cidade": "Porto Velho",
-      "estado": "RO",
-      "id": "1"
+      "estado": "RO"
     },
     {
       "id": "2",
       "nome": "Heloisa Ester Drumond",
       "sexo": "Feminino",
       "cpf": "312.109.636-20",
-      "data_nasc": "13/03/1971",
+      "data_nasc": "1971-03-13",
       "email": "heloisa-drumond88@sofisticattomoveis.com.br",
       "senha": "6ryB35sCtG",
       "cep": "72705-521",
@@ -81,8 +81,8 @@
       "nome": "Nina Brenda Melo",
       "sexo": "Feminino",
       "cpf": "257.574.483-00",
-      "data_nasc": "06/07/1998",
-      "email": "nina_melo@outloock.com.br",
+      "data_nasc": "1998-07-06",
+      "email": "nina_melo@outlook.com.br",
       "senha": "NHwx9em26r",
       "cep": "76873-382",
       "endereco": "Rua João Goulart",
@@ -96,7 +96,7 @@
       "nome": "Isabella Regina Alice das Neves",
       "sexo": "Feminino",
       "cpf": "228.632.736-04",
-      "data_nasc": "02/05/1951",
+      "data_nasc": "1951-05-02",
       "email": "isabellareginadasneves@uol.com",
       "senha": "5sjht1PEhX",
       "cep": "85869-299",
@@ -111,7 +111,7 @@
       "nome": "Amanda Priscila Nair da Mata",
       "sexo": "Feminino",
       "cpf": "597.862.243-45",
-      "data_nasc": "17/07/1984",
+      "data_nasc": "1984-07-17",
       "email": "amanda.priscila.damata@evolink.com.br",
       "senha": "WHBJ9yj2QK",
       "cep": "77023-446",
@@ -152,6 +152,7 @@
       "estado": "AP"
     },
     {
+      "id": "a4c9",
       "nome": "Heitor Julio Caldeira",
       "sexo": "masculino",
       "cpf": "422.408.096-63",
@@ -163,8 +164,7 @@
       "numero": "244",
       "bairro": "Dom Cabral",
       "cidade": "Belo Horizonte",
-      "estado": "MG",
-      "id": "a4c9"
+      "estado": "MG"
     }
   ]
 }

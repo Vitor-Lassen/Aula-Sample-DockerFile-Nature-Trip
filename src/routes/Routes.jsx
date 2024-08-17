@@ -17,7 +17,7 @@ function AppRoutes() {
                     <Routes>
                         <Route path='/' element={<Login />} />
                         <Route path='/login' element={<Login />} />
-                        <Route path='/cadastro-usuario' element={<CadastroUsuario />} />
+                        <Route path='/cadastro-usuario' element={<CadastroUsuario />} />                        
 
                         <Route path='/' element={<TemplatePrivateRoute />}>
                             <Route path='/dashboard' element={<Dashboard />} />
