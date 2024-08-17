@@ -93,7 +93,7 @@ function CadastroDestino() {
                                 </div>                                
                             </div>
 
-                            <div className='row mt-4'>
+                            <div className='row mt-3'>
                                 <div className='col-4'>
                                     <span className='error-message'>{formState.errors?.coordenadas?.message}</span>
                                     <input 
@@ -112,7 +112,7 @@ function CadastroDestino() {
                                     {...register('cep')} value={cep} onChange={onCepChange} 
                                     />
                                 </div>
-                                <div className='col-3'>
+                                <div className='col-2'>
                                     <span className='error-message'>{formState.errors?.cidade?.message}</span>
                                     <input 
                                     className='input-area w-100' 
@@ -121,13 +121,22 @@ function CadastroDestino() {
                                     {...register('cidade', { required: 'Campo Obrigatório' })} 
                                     />
                                 </div>
-                                <div className='col-3'>
+                                <div className='col-2'>
                                     <span className='error-message'>{formState.errors?.estado?.message}</span>
                                     <input 
                                     className='input-area w-100' 
                                     type="text" 
                                     placeholder='Estado' 
                                     {...register('estado', { required: 'Campo Obrigatório' })} 
+                                    />
+                                </div>
+                                <div className='col-2'>
+                                    <span className='error-message'>{formState.errors?.pais?.message}</span>
+                                    <input 
+                                    className='input-area w-100' 
+                                    type="text" 
+                                    placeholder='País' 
+                                    {...register('pais', { required: 'Campo Obrigatório' })} 
                                     />
                                 </div>
                             </div>                            

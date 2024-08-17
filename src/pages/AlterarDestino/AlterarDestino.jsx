@@ -135,7 +135,7 @@ function AlterarDestino() {
                                             onChange={onCepChange}
                                         />
                                     </div>
-                                    <div className='col-3'>
+                                    <div className='col-2'>
                                         <input
                                             className='input-area w-100'
                                             type="text"
@@ -143,12 +143,20 @@ function AlterarDestino() {
                                             {...register('cidade', { required: 'Campo Obrigatório' })}
                                         />
                                     </div>
-                                    <div className='col-3'>
+                                    <div className='col-2'>
                                         <input
                                             className='input-area w-100'
                                             type="text"
                                             placeholder='Estado'
                                             {...register('estado', { required: 'Campo Obrigatório' })}
+                                        />
+                                    </div>
+                                    <div className='col-2'>
+                                        <input
+                                            className='input-area w-100'
+                                            type="text"
+                                            placeholder='País'
+                                            {...register('pais', { required: 'Campo Obrigatório' })}
                                         />
                                     </div>
                                 </div>

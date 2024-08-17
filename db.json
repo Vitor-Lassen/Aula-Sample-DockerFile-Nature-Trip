@@ -1,26 +1,15 @@
 {
   "destinos": [
     {
-      "id": "bb08",
-      "nome": "PETAR - Parque Estadual Turístico do Alto Ribeira",
-      "descricao": "Parque estadual com Mata Atlântica preservada, mais de 350 cavernas, cachoeiras, rios e quatro centros de visitantes.",
-      "coordenadas": "-24.551436,-48.6828329",
-      "cep": "18330000",
-      "cidade": "Iporanga",
-      "estado": "São Paulo",
-      "usuarioId": "1"
-    },
-    {
       "id": "f962",
       "nome": "Lagoa do Peri",
-      "descricao": "lalalalal lal lalalalala",
+      "descricao": "A Lagoa do Peri é um corpo de água doce situada ao sudeste de Florianópolis, capital de Santa Catarina, entre uma cadeia de montanhas e o oceano Atlântico. É a maior lagoa da ilha de Santa Catarina - considerando que a Lagoa da Conceição, o maior corpo de água da ilha, é uma laguna salobra.",
       "coordenadas": "-27.7327331,-48.5423175",
       "cep": "88066242",
       "cidade": "Florianópolis",
       "estado": "Santa Catarina",
-      "endereco": "Servidão Alfredo Manoel Vieira",
-      "bairro": "Morro das Pedras",
-      "usuarioId": "1"
+      "usuarioId": "8082",
+      "pais": "Brasil"
     },
     {
       "id": "252e",
@@ -30,9 +19,8 @@
       "cep": "4641",
       "cidade": "Municipio de Susques",
       "estado": "Jujuy",
-      "endereco": "Servidão Alfredo Manoel Vieira",
-      "bairro": "Morro das Pedras",
-      "usuarioId": "a4c9"
+      "usuarioId": "2",
+      "pais": "Argentina"
     },
     {
       "id": "7309",
@@ -42,11 +30,24 @@
       "cep": "",
       "cidade": "Iporanga",
       "estado": "São Paulo",
-      "usuarioId": "a4c9"
+      "usuarioId": "a4c9",
+      "pais": "Brasil"
+    },
+    {
+      "id": "8131",
+      "nome": "Ponta das Campanhas",
+      "descricao": "A Ponta das Companhas, localizada entre as praias da Armação e do Matadeiro, encanta com sua beleza natural e histórica. Acessível por uma passarela de madeira, esta ponta oferece uma visão deslumbrante das praias vizinhas. Ao olhar para a esquerda, estando de frente para as praias, contempla-se a deslumbrante Praia do Matadeiro, enquanto à direita surge a bela Praia da Armação.",
+      "coordenadas": "-27.7483373,-48.4991234",
+      "cep": "",
+      "cidade": "Florianópolis",
+      "estado": "Santa Catarina",
+      "usuarioId": "8082",
+      "pais": "Brasil"
     }
   ],
   "usuarios": [
     {
+      "id": "1",
       "nome": "Milena Adriana Sara Almeida",
       "sexo": "feminino",
       "cpf": "408.147.638-12",
@@ -58,15 +59,14 @@
       "numero": 196,
       "bairro": "Agenor de Carvalho",
       "cidade": "Porto Velho",
-      "estado": "RO",
-      "id": "1"
+      "estado": "RO"
     },
     {
       "id": "2",
       "nome": "Heloisa Ester Drumond",
       "sexo": "Feminino",
       "cpf": "312.109.636-20",
-      "data_nasc": "13/03/1971",
+      "data_nasc": "1971-03-13",
       "email": "heloisa-drumond88@sofisticattomoveis.com.br",
       "senha": "6ryB35sCtG",
       "cep": "72705-521",
@@ -81,8 +81,8 @@
       "nome": "Nina Brenda Melo",
       "sexo": "Feminino",
       "cpf": "257.574.483-00",
-      "data_nasc": "06/07/1998",
-      "email": "nina_melo@outloock.com.br",
+      "data_nasc": "1998-07-06",
+      "email": "nina_melo@outlook.com.br",
       "senha": "NHwx9em26r",
       "cep": "76873-382",
       "endereco": "Rua João Goulart",
@@ -96,7 +96,7 @@
       "nome": "Isabella Regina Alice das Neves",
       "sexo": "Feminino",
       "cpf": "228.632.736-04",
-      "data_nasc": "02/05/1951",
+      "data_nasc": "1951-05-02",
       "email": "isabellareginadasneves@uol.com",
       "senha": "5sjht1PEhX",
       "cep": "85869-299",
@@ -111,7 +111,7 @@
       "nome": "Amanda Priscila Nair da Mata",
       "sexo": "Feminino",
       "cpf": "597.862.243-45",
-      "data_nasc": "17/07/1984",
+      "data_nasc": "1984-07-17",
       "email": "amanda.priscila.damata@evolink.com.br",
       "senha": "WHBJ9yj2QK",
       "cep": "77023-446",
@@ -152,6 +152,7 @@
       "estado": "AP"
     },
     {
+      "id": "a4c9",
       "nome": "Heitor Julio Caldeira",
       "sexo": "masculino",
       "cpf": "422.408.096-63",
@@ -163,8 +164,7 @@
       "numero": "244",
       "bairro": "Dom Cabral",
       "cidade": "Belo Horizonte",
-      "estado": "MG",
-      "id": "a4c9"
+      "estado": "MG"
     }
   ]
 }
