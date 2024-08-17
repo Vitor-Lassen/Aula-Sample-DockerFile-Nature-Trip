@@ -7,12 +7,12 @@ function CardDestino({ nome, descricao, cidade, estado }) {
             <div className='card-container column'>
                 <div className='row header-card'>
                     <div className='col'>
-                        <h4>{nome}</h4>
+                        <h6>{nome}</h6>
                     </div>
                 </div>
                 <div className='row descricao-card'>
                     <div className='col'>
-                        <h6>{descricao}</h6>
+                        <h7>{descricao}</h7>
                     </div>
                 </div>
                 <div className='row footer-card'>

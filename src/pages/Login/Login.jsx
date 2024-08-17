@@ -33,7 +33,7 @@ function Login() {
         <>
             <div className='flex-row login-bg'>                
                 <div className='form-container-login column'>
-                    <div className='img-frase'>
+                    <div className='img-login'>
                         <img src="../src/imgs/frase-login.png" alt="Birdy colecione suas histórias" />
                     </div>
                     
@@ -60,9 +60,7 @@ function Login() {
                         <Link className='texto-link' to='/cadastro-usuario'>
                             <span className='texto-link'>Cadastrar</span>
                         </Link>
-                    </div>
-                    
-                                      
+                    </div>                                     
                 </div>
 
             </div>

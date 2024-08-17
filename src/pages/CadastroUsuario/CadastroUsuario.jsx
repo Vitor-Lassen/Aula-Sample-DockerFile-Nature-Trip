@@ -16,8 +16,43 @@ function CadastroUsuario() {
         }
     }
 
-    async function addUser(data) {
+    const checkCpfUnico = async (cpf) => {
         try {
+            const response = await fetch(`http://localhost:3000/usuarios?cpf=${cpf}`)
+            const data = await response.json()
+            return data.length === 0;
+        } catch (error) {
+            alert("Erro ao verificar CPF")
+            return false
+        }
+    }
+
+    const checkEmailUnico = async (email) => {
+        try {
+            const response = await fetch(`http://localhost:3000/usuarios?email=${email}`)
+            const data = await response.json()
+            return data.length === 0
+        } catch (error) {
+            alert("Erro ao verificar e-mail")
+            return false
+        }
+    }
+
+    async function addUser(data) {
+
+        try {
+            const cpfUnico = await checkCpfUnico(data.cpf)
+            if (!cpfUnico) {
+                alert("CPF já cadastrado")
+                return
+            }
+
+            const emailUnico = await checkEmailUnico(data.email)
+            if (!emailUnico) {
+                alert("E-mail já cadastrado")
+                return
+            }
+
             const response = await fetch('http://localhost:3000/usuarios', {
                 method: 'post',
                 body: JSON.stringify(data)
@@ -39,15 +74,15 @@ function CadastroUsuario() {
         <>
             <div className='flex-row'>
                 <div className='position-fixed'>
-                    <img src="../src/imgs/lateral.jpg" alt="Imagem lateral mapa e câmera com capa de couro" />
+                    <img src="../src/imgs/lateral.jpg" alt="Imagem lateral tela notebook com natureza sobreposta" />
                 </div>
                 <div className="container-bg ml-500">
                     <h2 className='titulo'>Cadastre-se</h2>
                     <div>
                         <form onSubmit={handleSubmit(addUser)}>
-                            <div className='row'>
+                            <div className='row mt-4'>
                                 <div className='col-12'>
-                                    <span className='error-message'>{formState.errors?.nome?.message}</span><br />
+                                    <span className='error-message'>{formState.errors?.nome?.message}</span>
                                     <input
                                         className='input-area w-100'
                                         type="text"
@@ -57,11 +92,11 @@ function CadastroUsuario() {
                                 </div>
                             </div>
 
-                            <div className='row'>
+                            <div className='row mt-4'>
                                 <div className='col-4'>
                                     <span className='error-message'>{formState.errors?.sexo?.message}</span>
                                     <select className='input-area w-100' {...register('sexo')}>
-                                        <option value=""></option>
+                                        <option value="">Sexo</option>
                                         <option value="feminino">Feminino</option>
                                         <option value="masculino">Masculino</option>
                                         <option value="na">Prefiro não informar</option>
@@ -87,7 +122,7 @@ function CadastroUsuario() {
                                 </div>
                             </div>
 
-                            <div className='row'>
+                            <div className='row mt-4'>
                                 <div className='col-8'>
                                     <span className='error-message'>{formState.errors?.email?.message}</span>
                                     <input
@@ -105,7 +140,7 @@ function CadastroUsuario() {
                                 </div>
                             </div>
 
-                            <div className='row'>
+                            <div className='row mt-4'>
                                 <div className='col-3'>
                                     <span className='error-message'>{formState.errors?.cep?.message}</span>
                                     <input
@@ -132,7 +167,7 @@ function CadastroUsuario() {
                                 </div>
                             </div>
 
-                            <div className='row'>
+                            <div className='row mt-4'>
                                 <div className='col-4'>
                                     <span className='error-message'>{formState.errors?.bairro?.message}</span>
                                     <input
@@ -158,7 +193,7 @@ function CadastroUsuario() {
                                 </div>
                             </div>
 
-                            <button className='btn-style w-100' type='submit'>Cadastrar</button>
+                            <button className='btn-style w-100 mt-5' type='submit'>Cadastrar</button>
                         </form>
                     </div>
                 </div>
