@@ -3,14 +3,13 @@
     width: 100vw;
 }
 
-.cards {    
+.card {    
     width: 250px;
     height: 130px;
-    background-color:  #7b2b2a;
-    align-items: center;    
+    background-color:  #7b2b2a;    
     color: #eab741;
     padding: 20px;
-    margin: 10px;    
+    margin: 10px;
 }
 
 .num-card {
