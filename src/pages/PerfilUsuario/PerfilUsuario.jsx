@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
 import Menu from '../../componentes/Menu/Menu'
 
 function PerfilUsuario() {
     const { register, handleSubmit, setValue } = useForm()
     const [usuario, setUsuario] = useState({ nome: '', id: '' })
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     useEffect(() => {
         const usuarioNome = localStorage.getItem('usuarioNome')
@@ -29,10 +29,10 @@ function PerfilUsuario() {
                     setValue(key, data[key])
                 }
             } else {
-                alert('Erro ao carregar os dados do usuário.');
+                alert('Erro ao carregar os dados do usuário.')
             }
         } catch (error) {
-            alert('Erro ao carregar os dados do usuário.');
+            alert('Erro ao carregar os dados do usuário.')
         }
     }
 
@@ -47,14 +47,18 @@ function PerfilUsuario() {
             })
 
             if (response.ok) {
-                alert('Dados atualizados com sucesso!');
-                navigate('/dashboard');
+                alert('Dados atualizados com sucesso!')
+                navigate('/dashboard')
             } else {
-                alert('Erro ao atualizar os dados do usuário.');
+                alert('Erro ao atualizar os dados do usuário.')
             }
         } catch (error) {
-            alert('Erro ao atualizar os dados do usuário.');
+            alert('Erro ao atualizar os dados do usuário.')
         }
+    }
+
+    const handleDashboard = () => {
+        navigate('/dashboard')
     }
 
     return (
@@ -181,7 +185,10 @@ function PerfilUsuario() {
                                 </div>
                             </div>
 
-                            <button className='btn-style w-100 mt-5' type='submit'>Atualizar</button>
+                            <div className='row gap-5'>
+                                <button onClick={handleDashboard} className='mt-5 btn-white btn-style w-50 col' type='submit'>Cancelar</button>
+                                <button className='mt-5 btn-yellow btn-style w-50 col' type='submit'>Atualizar</button>
+                            </div>
                         </form>
                     </div>
                 </div>

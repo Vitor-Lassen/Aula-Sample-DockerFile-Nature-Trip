@@ -16,7 +16,7 @@ function CadastroUsuario() {
         }
     }
 
-    const handleDashboard = () => {
+    const handleLogin = () => {
         navigate('/')
     }
 
@@ -197,7 +197,7 @@ function CadastroUsuario() {
                                 </div>
                             </div>
                             <div className='row gap-5'>
-                                <button onClick={handleDashboard} className='mt-5 btn-white btn-style w-50 col' type='submit'>Cancelar</button>
+                                <button onClick={handleLogin} className='mt-5 btn-white btn-style w-50 col' type='submit'>Cancelar</button>
                                 <button className='mt-5 btn-yellow btn-style w-50 col' type='submit'>Cadastrar</button>
                             </div>
                         </form>

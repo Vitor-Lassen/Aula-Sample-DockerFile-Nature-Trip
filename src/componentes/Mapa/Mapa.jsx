@@ -37,7 +37,7 @@ function Mapa({ selectedDestino, destinos, zoomLevel }) {
         iconUrl: iconUrl,
         iconSize: [20, 30],
         iconAnchor: [12, 41],
-        popupAnchor: [1, -34],        
+        popupAnchor: [1, -34],
         shadowSize: [41, 41],
     })
 
@@ -45,14 +45,14 @@ function Mapa({ selectedDestino, destinos, zoomLevel }) {
         iconUrl: highlightedIconUrl,
         iconSize: [20, 30],
         iconAnchor: [15, 46],
-        popupAnchor: [1, -34],        
+        popupAnchor: [1, -34],
         shadowSize: [41, 41],
     });
 
-    return (        
-        <MapContainer 
+    return (
+        <MapContainer
             center={position}
-            zoom={zoom}            
+            zoom={zoom}
             className="map-container"
         >
             <TileLayer
@@ -73,9 +73,7 @@ function Mapa({ selectedDestino, destinos, zoomLevel }) {
                     >
                         <Popup>
                             <strong>{destino.nome}</strong>
-                            <br />
-                            {destino.descricao}
-                            <br />
+                            <br/>
                             {destino.cidade}, {destino.estado}
                         </Popup>
                     </Marker>
