@@ -42,6 +42,10 @@ function AlterarDestino() {
         }
     }, [id, setValue])
 
+    const handleDashboard = () => {
+        navigate('/dashboard')
+    }
+
     const atualizarDestino = async (data) => {
         try {
             const destinoData = { ...data, usuarioId: usuario.id }
@@ -161,7 +165,19 @@ function AlterarDestino() {
                                     </div>
                                 </div>
 
-                                <button className='btn-style w-100 mt-5' type='submit'>Atualizar</button>
+                                <div className='row gap-5'>
+                                    <button
+                                        onClick={handleDashboard}
+                                        className='mt-5 btn-white btn-style w-50 col'
+                                        type='button'>
+                                        Cancelar
+                                    </button>
+                                    <button
+                                        className='mt-5 btn-yellow btn-style w-50 col'
+                                        type='submit'>
+                                        Atualizar
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     )}

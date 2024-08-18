@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "axios"
 
 const baseURL = 'http://localhost:3000'
 
@@ -11,7 +11,7 @@ async function contaDados() {
         const contDestinos = destinosResponse.data.length
 
         return { contUsuarios, contDestinos }
-        
+
     } catch (error) {
         console.error('Erro ao obter contagem:', error.message)
         return { numeroUsuarios: 0, numeroDestinos: 0 }

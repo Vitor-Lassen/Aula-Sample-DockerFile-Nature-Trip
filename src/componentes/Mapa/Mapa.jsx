@@ -73,7 +73,7 @@ function Mapa({ selectedDestino, destinos, zoomLevel }) {
                     >
                         <Popup>
                             <strong>{destino.nome}</strong>
-                            <br/>
+                            <br />
                             {destino.cidade}, {destino.estado}
                         </Popup>
                     </Marker>

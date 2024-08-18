@@ -2,6 +2,8 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import buscaCep from '../../util/buscaCep'
 import { useNavigate } from 'react-router-dom'
+import checkCpfUnico from '../../util/cpfUnico'
+import checkEmailUnico from '../../util/emailUnico'
 
 function CadastroUsuario() {
     const { register, handleSubmit, setValue, formState } = useForm()
@@ -20,30 +22,7 @@ function CadastroUsuario() {
         navigate('/')
     }
 
-    const checkCpfUnico = async (cpf) => {
-        try {
-            const response = await fetch(`http://localhost:3000/usuarios?cpf=${cpf}`)
-            const data = await response.json()
-            return data.length === 0;
-        } catch (error) {
-            alert("Erro ao verificar CPF")
-            return false
-        }
-    }
-
-    const checkEmailUnico = async (email) => {
-        try {
-            const response = await fetch(`http://localhost:3000/usuarios?email=${email}`)
-            const data = await response.json()
-            return data.length === 0
-        } catch (error) {
-            alert("Erro ao verificar e-mail")
-            return false
-        }
-    }
-
     async function addUser(data) {
-
         try {
             const cpfUnico = await checkCpfUnico(data.cpf)
             if (!cpfUnico) {
@@ -197,8 +176,17 @@ function CadastroUsuario() {
                                 </div>
                             </div>
                             <div className='row gap-5'>
-                                <button onClick={handleLogin} className='mt-5 btn-white btn-style w-50 col' type='submit'>Cancelar</button>
-                                <button className='mt-5 btn-yellow btn-style w-50 col' type='submit'>Cadastrar</button>
+                                <button
+                                    onClick={handleLogin}
+                                    className='mt-5 btn-white btn-style w-50 col'
+                                    type='button'>
+                                    Cancelar
+                                </button>
+                                <button
+                                    className='mt-5 btn-yellow btn-style w-50 col'
+                                    type='submit'>
+                                    Cadastrar
+                                </button>
                             </div>
                         </form>
                     </div>

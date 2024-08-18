@@ -1,6 +1,5 @@
 import '../CardDestino/CardDestino.css'
 
-
 function CardDestino({ nome, descricao, cidade, estado, pais, coordenadas, onMouseEnter, onMouseLeave, onClick }) {
     return (
         <>
@@ -32,7 +31,6 @@ function CardDestino({ nome, descricao, cidade, estado, pais, coordenadas, onMou
                     </div>
                     <div className='col'>
                         <h6>{coordenadas}</h6>
-                        
                     </div>
                 </div>
             </div>
