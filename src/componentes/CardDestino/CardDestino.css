@@ -34,3 +34,11 @@
     border-radius: 0 0 4px 4px;   
     padding-left: 10px;
 }
+
+.card-destino {
+    cursor: pointer;
+}
+
+.card-destino:hover {
+    background-color: rgb(228, 228, 228);
+}

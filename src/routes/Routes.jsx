@@ -17,10 +17,11 @@ function AppRoutes() {
                     <Routes>
                         <Route path='/' element={<Login />} />
                         <Route path='/login' element={<Login />} />
-                        <Route path='/cadastro-usuario' element={<CadastroUsuario />} />                        
+                        <Route path='/cadastro-usuario' element={<CadastroUsuario />} />
+                        <Route path='/dashboard' element={<Dashboard />} />                        
 
                         <Route path='/' element={<TemplatePrivateRoute />}>
-                            <Route path='/dashboard' element={<Dashboard />} />
+                            {/* <Route path='/dashboard' element={<Dashboard />} /> */}
                             <Route path='/cadastro-local' element={<CadastroDestino />} />
                             <Route path='/locais' element={<ListaDestinos />} />
                             <Route path='/perfil-usuario' element={<PerfilUsuario />} />
