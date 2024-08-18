@@ -61,6 +61,41 @@ function PerfilUsuario() {
         navigate('/dashboard')
     }
 
+    const handleExcluir = async (id) => {
+        const confirmar = window.confirm("Tem certeza que deseja excluir seu usuário?")
+
+        if (confirmar) {
+            try {
+                const locaisResponse = await fetch(`http://localhost:3000/destinos?usuarioId=${id}`)
+                if (!locaisResponse.ok) {
+                    throw new Error('Erro ao verificar locais cadastrados.')
+                }
+
+                const locaisData = await locaisResponse.json()
+
+                if (locaisData.length > 0) {
+                    alert("Não é possível excluir o usuário, pois ele tem locais cadastrados.")
+                    return
+                }
+
+                const response = await fetch(`http://localhost:3000/usuarios/${id}`, {
+                    method: 'DELETE',
+                })
+
+                if (response.ok) {
+                    alert('Sua conta foi excluída!')
+                    localStorage.removeItem('usuarioNome')
+                    localStorage.removeItem('usuarioId')
+                    navigate('/')
+                } else {
+                    alert("Erro ao excluir o usuário.")
+                }
+            } catch (error) {
+                alert("Erro ao excluir o usuário catch.")
+            }
+        }
+    }
+
     return (
         <>
             <div className='flex-row'>
@@ -73,6 +108,14 @@ function PerfilUsuario() {
                             <p><strong>Nome:</strong> {usuario.nome}</p>
                         </div>
                     )}
+                    <div className='position-relative'>
+                        <p
+                            className='position-absolute end-0 texto-link'
+                            onClick={() => handleExcluir(usuario.id)}>
+                            Excluir conta
+                        </p>
+                    </div>
+
                     <div>
                         <form onSubmit={handleSubmit(atualizarUsuario)}>
                             <div className='row mt-4'>
@@ -186,8 +229,17 @@ function PerfilUsuario() {
                             </div>
 
                             <div className='row gap-5'>
-                                <button onClick={handleDashboard} className='mt-5 btn-white btn-style w-50 col' type='submit'>Cancelar</button>
-                                <button className='mt-5 btn-yellow btn-style w-50 col' type='submit'>Atualizar</button>
+                                <button
+                                    onClick={handleDashboard}
+                                    className='mt-5 btn-white btn-style w-50 col'
+                                    type='button'>
+                                    Cancelar
+                                </button>
+                                <button
+                                    className='mt-5 btn-yellow btn-style w-50 col'
+                                    type='submit'>
+                                    Atualizar
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -197,4 +249,4 @@ function PerfilUsuario() {
     )
 }
 
-export default PerfilUsuario;
+export default PerfilUsuario

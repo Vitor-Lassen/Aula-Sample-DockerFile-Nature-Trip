@@ -23,32 +23,32 @@ function Login() {
                 navigate('/dashboard')
             } else {
                 alert('E-mail ou senha incorretos')
-            }            
+            }
         } catch (error) {
             console.error('Erro de autenticação: ', error)
         }
-    }   
-    
+    }
+
     return (
         <>
-            <div className='flex-row login-bg'>                
+            <div className='flex-row login-bg'>
                 <div className='form-container-login column'>
                     <div className='img-login'>
                         <img src="../src/imgs/frase-login.png" alt="Birdy colecione suas histórias" />
                     </div>
-                    
+
                     <h2>Login</h2>
                     <form onSubmit={handleSubmit} className='input-login column'>
-                        <input 
-                            className='input-area' 
-                            type="text" 
-                            placeholder='E-mail' 
-                            value={email} 
-                            onChange={(e) => setEmail(e.target.value)} 
+                        <input
+                            className='input-area'
+                            type="text"
+                            placeholder='E-mail'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
-                        <input 
-                            className='input-area' 
-                            type="password" 
+                        <input
+                            className='input-area'
+                            type="password"
                             placeholder='Senha'
                             value={senha}
                             onChange={(e) => setSenha(e.target.value)}
@@ -60,7 +60,7 @@ function Login() {
                         <Link className='texto-link' to='/cadastro-usuario'>
                             <span className='texto-link'>Cadastrar</span>
                         </Link>
-                    </div>                                     
+                    </div>
                 </div>
 
             </div>

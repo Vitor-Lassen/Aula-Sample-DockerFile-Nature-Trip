@@ -3,17 +3,17 @@
     flex-direction: row;
 }
 
-.input-area {    
+.input-area {
     height: 20px;
     border-radius: 6px;
     font-weight: lighter;
-    color: rgb(68, 68, 68); 
-    background-color: rgba(255, 255, 255, 0.822);    
+    color: rgb(68, 68, 68);
+    background-color: rgba(255, 255, 255, 0.822);
     font-family: Roboto;
     border: 1px solid rgb(153, 153, 153);
     padding-top: 5px;
     font-size: 14px;
-    margin-top: 18px;          
+    margin-top: 15px;
 }
 
 input[type="text" i],
@@ -21,24 +21,24 @@ textarea[type="text" i],
 input[type="password" i],
 input[type="date"] {
     padding: 15px;
-    padding-left: 10px;    
+    padding-left: 10px;
 }
 
 select.input-area {
     height: 32px;
     padding-left: 10px;
-    color: rgb(68, 68, 68);  
+    color: rgb(68, 68, 68);
 }
 
 .btn-style {
     cursor: pointer;
     border-radius: 6px;
-    padding: 10px;    
-    border: 1px solid transparent;    
+    padding: 10px;
+    border: 1px solid transparent;
     font-family: Roboto, sans-serif;
-    
+
     font-weight: bold;
-    margin-top: 15px;    
+    margin-top: 15px;
 }
 
 .btn-yellow {
@@ -47,8 +47,8 @@ select.input-area {
 }
 
 .btn-white {
-    background-color:antiquewhite;
-    color: rgb(51, 51, 51);    
+    background-color: antiquewhite;
+    color: rgb(51, 51, 51);
     border: 1px solid #eab741;
 }
 
@@ -62,7 +62,7 @@ button:active {
 
 .f-12 {
     font-size: 12px;
-    font-weight:lighter;    
+    font-weight: lighter;
 }
 
 .space::after {
@@ -72,25 +72,25 @@ button:active {
 
 .container-bg {
     box-sizing: border-box;
-    background-color:#FFFBE9;
+    background-color: #FFFBE9;
     height: 100vh;
-    width: 100vw;    
+    width: 100vw;
     align-items: center;
-    margin-Left: 200px; 
-    padding: 40px;     
+    margin-Left: 200px;
+    padding: 40px;
 }
 
 .titulo {
     color: rgb(51, 51, 51);
     margin-bottom: 10px;
-    margin-right: 20px;    
+    margin-right: 20px;
 }
 
 .error-message {
     position: absolute;
-    font-size: 10px;    
-    color: #7b2b2a; 
-    margin-bottom: 10px;       
+    font-size: 10px;
+    color: #7b2b2a;
+    margin-bottom: 10px;
 }
 
 .f-branco {
