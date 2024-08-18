@@ -1,6 +1,6 @@
 import axios from "axios"
 
-async function buscaCep(cep, setValue) {    
+async function buscaCep(cep, setValue) {
 
     try {
         const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`)

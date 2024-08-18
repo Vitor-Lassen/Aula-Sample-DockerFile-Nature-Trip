@@ -2,38 +2,39 @@
     box-sizing: border-box;
     background-image: url('../../imgs/background.jpg');
     background-color: #504d2c;
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: start center;
     width: 100vw;
-    height: 100vh; 
-    justify-content: flex-end;       
+    height: 100vh;
+    justify-content: flex-end;
 }
 
-.form-container-login{
-    box-sizing: border-box;    
-    color: #eab741;    
-    width: 365px;    
+.form-container-login {
+    box-sizing: border-box;
+    color: #eab741;
+    width: 365px;
     justify-content: end;
-    padding-left: 50px;    
-    position: fixed;       
+    padding-left: 50px;
+    position: fixed;
 }
 
-.input-login {     
-    align-items: start;    
-    padding-bottom: 100px;    
+.input-login {
+    align-items: start;
+    padding-bottom: 100px;
     height: 10px;
-    margin-bottom: 80px;      
+    margin-bottom: 80px;
 }
 
-.texto-link {    
+.texto-link {
     text-decoration: none;
-    color: #eab741; 
-    align-items: center;           
+    color: #eab741;
+    align-items: center;
+    cursor: pointer;
 }
 
 .texto-link:hover {
-    color: #ce8326;    
+    color: #ce8326;
 }
 
 .img-login img {

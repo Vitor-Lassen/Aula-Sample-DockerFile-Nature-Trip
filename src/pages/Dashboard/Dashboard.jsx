@@ -22,7 +22,7 @@ function Dashboard() {
 
             const response = await fetch('http://localhost:3000/destinos')
             const data = await response.json()
-            setDestinos(data)            
+            setDestinos(data)
         }
 
         fetchData()
@@ -35,7 +35,7 @@ function Dashboard() {
     const handleMouseEnter = (destino) => {
         setSelectedDestino(destino)
         setZoomLevel(4)
-    }    
+    }
 
     const handleCardClick = (destino) => {
         setSelectedDestino(destino)
@@ -77,7 +77,7 @@ function Dashboard() {
                     <div className='lista-locais'>
                         <div>
                             {destinos.map(destino => (
-                                <CardDestino                                    
+                                <CardDestino
                                     key={destino.id}
                                     nome={destino.nome}
                                     descricao={destino.descricao}
@@ -85,7 +85,7 @@ function Dashboard() {
                                     estado={destino.estado}
                                     pais={destino.pais}
                                     coordenadas={destino.coordenadas}
-                                    onMouseEnter={() => handleMouseEnter(destino)}                                    
+                                    onMouseEnter={() => handleMouseEnter(destino)}
                                     onClick={() => handleCardClick(destino)}
                                 />
                             ))}

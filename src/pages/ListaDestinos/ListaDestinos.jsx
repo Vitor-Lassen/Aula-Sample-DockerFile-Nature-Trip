@@ -10,7 +10,7 @@ function ListaDestinos() {
     useEffect(() => {
         const usuarioId = localStorage.getItem('usuarioId')
 
-        const fetchDestinos = async () => {
+        const carregarDestinos = async () => {
             try {
                 const response = await fetch(`http://localhost:3000/destinos?usuarioId=${usuarioId}`)
                 if (response.ok) {
@@ -25,7 +25,7 @@ function ListaDestinos() {
         }
 
         if (usuarioId) {
-            fetchDestinos()
+            carregarDestinos()
         }
     }, [])
 
