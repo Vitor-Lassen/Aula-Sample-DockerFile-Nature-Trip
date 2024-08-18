@@ -6,13 +6,13 @@ O projeto tem como objetivo planejar, registrar e explorar destinos turísticos,
 
 
 🛠️ Foi desenvolvido com:
-    React + Vite
-    Bootstrap
-    HTML
-    CSS 
-    JavaScript 
-    dotenv
 
+    React + Vite    
+    Bootstrap    
+    HTML    
+    CSS     
+    JavaScript     
+    dotenv
 
 🗺️ Para requisições geográficas e mapa:
 
@@ -25,11 +25,13 @@ O projeto tem como objetivo planejar, registrar e explorar destinos turísticos,
     https://www.4devs.com.br/gerador_de_pessoas
 
 🎬 Para rodar o repositório:
+
     🐑 Clone o repositório
     📦 Instale as dependências:
         npm install
 
 📽️ Para rodar o repositório em ambiente local:
+
     npm run dev
     npx json-server db.json
 
