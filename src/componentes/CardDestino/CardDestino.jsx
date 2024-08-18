@@ -1,15 +1,14 @@
 import '../CardDestino/CardDestino.css'
 
 
-function CardDestino({ nome, descricao, cidade, estado, pais, coordenadas, onMouseEnter, onMouseLeave }) {
-    const [lat, lon] = coordenadas.split(',')
-
+function CardDestino({ nome, descricao, cidade, estado, pais, coordenadas, onMouseEnter, onMouseLeave, onClick }) {
     return (
         <>
             <div
-                className='card-container column'
+                className='card-container column card-destino'
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
+                onClick={onClick}
             >
                 <div className='row header-card'>
                     <div className='col'>
