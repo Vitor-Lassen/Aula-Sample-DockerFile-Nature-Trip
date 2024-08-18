@@ -11,6 +11,7 @@ function Dashboard() {
     const [contDestinos, setContDestinos] = useState(0)
     const [destinos, setDestinos] = useState([])
     const [selectedDestino, setSelectedDestino] = useState(null)
+    const [zoomLevel, setZoomLevel] = useState(4)
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -32,27 +33,25 @@ function Dashboard() {
     }
 
     const handleMouseEnter = (destino) => {
-        setSelectedDestino(destino);
-    }
-
-    const handleMouseLeave = () => {
-        setSelectedDestino(null);
-    }
+        setSelectedDestino(destino)
+        setZoomLevel(4)
+    }    
 
     const handleCardClick = (destino) => {
-        setSelectedDestino(destino);
+        setSelectedDestino(destino)
+        setZoomLevel(10)
     }
 
     return (
         <>
             <div className='flex-row'>
                 <Menu></Menu>
-                <Mapa selectedDestino={selectedDestino} destinos={destinos} />
+                <Mapa selectedDestino={selectedDestino} destinos={destinos} zoomLevel={zoomLevel} />
                 <div className='flex-column container-bg'>
                     <div className='position-fixed dashboard-container'>
                         <div className='d-flex align-items-baseline'>
                             <h2 className='titulo'>Dashboard</h2>
-                            <button onClick={handleNovoLocal} className='btn-style f-13'>Novo Local</button>
+                            <button onClick={handleNovoLocal} className='btn-yellow btn-style f-13'>Novo Local</button>
                         </div>
 
                         <div className='flex-row'>
@@ -78,7 +77,7 @@ function Dashboard() {
                     <div className='lista-locais'>
                         <div>
                             {destinos.map(destino => (
-                                <CardDestino
+                                <CardDestino                                    
                                     key={destino.id}
                                     nome={destino.nome}
                                     descricao={destino.descricao}
@@ -86,8 +85,7 @@ function Dashboard() {
                                     estado={destino.estado}
                                     pais={destino.pais}
                                     coordenadas={destino.coordenadas}
-                                    onMouseEnter={() => handleMouseEnter(destino)}
-                                    onMouseLeave={handleMouseLeave}
+                                    onMouseEnter={() => handleMouseEnter(destino)}                                    
                                     onClick={() => handleCardClick(destino)}
                                 />
                             ))}

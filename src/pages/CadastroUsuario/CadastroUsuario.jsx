@@ -16,6 +16,10 @@ function CadastroUsuario() {
         }
     }
 
+    const handleLogin = () => {
+        navigate('/')
+    }
+
     const checkCpfUnico = async (cpf) => {
         try {
             const response = await fetch(`http://localhost:3000/usuarios?cpf=${cpf}`)
@@ -192,8 +196,10 @@ function CadastroUsuario() {
                                         {...register('estado', { required: 'Campo Obrigatório' })} />
                                 </div>
                             </div>
-
-                            <button className='btn-style w-100 mt-5' type='submit'>Cadastrar</button>
+                            <div className='row gap-5'>
+                                <button onClick={handleLogin} className='mt-5 btn-white btn-style w-50 col' type='submit'>Cancelar</button>
+                                <button className='mt-5 btn-yellow btn-style w-50 col' type='submit'>Cadastrar</button>
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -165,6 +165,21 @@
       "bairro": "Dom Cabral",
       "cidade": "Belo Horizonte",
       "estado": "MG"
+    },
+    {
+      "nome": "Manoel Fernando da Rosa",
+      "sexo": "masculino",
+      "cpf": "601.862.380-37",
+      "data_nasc": "1979-02-15",
+      "email": "manoel_fernando_darosa@caiuas.com.br",
+      "senha": "yENy09yhTC",
+      "cep": "35053610",
+      "endereco": "Rua Santa Inês",
+      "numero": "345",
+      "bairro": "Mãe de Deus",
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "id": "410d"
     }
   ]
 }

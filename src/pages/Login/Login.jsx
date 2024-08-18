@@ -53,7 +53,7 @@ function Login() {
                             value={senha}
                             onChange={(e) => setSenha(e.target.value)}
                         /> <br />
-                        <button type='submit' className='btn-style'>Entrar</button>
+                        <button type='submit' className='btn-style btn-yellow'>Entrar</button>
                     </form>
                     <div className='flex-row f-12'>
                         <p className='space f-branco'>Ainda não tem cadastro?</p>
