@@ -35,3 +35,18 @@ O projeto tem como objetivo planejar, registrar e explorar destinos turísticos,
 
 🛝 Acesse pelo navegador:
     http://localhost:5173
+
+
+## Tela Login
+
+![image](./src/imgs/tela-login.png)
+
+
+## Tela Cadastro
+
+![image](./src/imgs/tela-cadastro.png)
+
+
+## Tela Dashboard
+
+![image](./src/imgs/tela-dashboard.png)
