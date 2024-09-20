@@ -1,4 +1,4 @@
-FROM node:22-alpine
+FROM node:22-alpine AS Construir
 
 WORKDIR /app
 
@@ -6,6 +6,11 @@ COPY . .
 
 RUN npm i
 
-CMD [ "npm", "run", "dev"] 
+RUN npm run build
 
-EXPOSE 3000
+FROM nginx:alpine AS PROD
+
+COPY --from=Construir /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+EXPOSE 443
